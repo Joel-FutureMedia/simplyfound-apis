@@ -49,7 +49,7 @@ public class HeroSectionService {
         Path filePath = Paths.get(UPLOAD_DIR).resolve(fileName);
         Files.copy(file.getInputStream(), filePath, StandardCopyOption.REPLACE_EXISTING);
 
-        String fileUrl = "https://simplyfound.vercel.app/api/hero/view/" + fileName;
+        String fileUrl = "https://api.simplyfound.com.na/api/hero/view/" + fileName;
 
         HeroSection hero = new HeroSection();
         hero.setTittle(title);
@@ -90,7 +90,7 @@ public class HeroSectionService {
             Path filePath = Paths.get(UPLOAD_DIR).resolve(fileName);
             Files.copy(file.getInputStream(), filePath, StandardCopyOption.REPLACE_EXISTING);
 
-            String fileUrl = "https://simplyfound.vercel.app/api/hero/view/" + fileName;
+            String fileUrl = "https://api.simplyfound.com.na/api/hero/view/" + fileName;
             existing.setFileUrl(fileUrl);
             existing.setFileType(contentType);
         }

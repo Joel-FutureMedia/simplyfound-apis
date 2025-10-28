@@ -51,7 +51,7 @@ public class NewsBlogService {
         Path filePath = Paths.get(UPLOAD_DIR).resolve(fileName);
         Files.copy(file.getInputStream(), filePath, StandardCopyOption.REPLACE_EXISTING);
 
-        String fileUrl = "https://simplyfound.vercel.app/api/news/view/" + fileName;
+        String fileUrl = "https://api.simplyfound.com.na/api/news/view/" + fileName;
 
         NewsBlog news = new NewsBlog();
         news.setTitle(title);
@@ -97,7 +97,7 @@ public class NewsBlogService {
             Path filePath = Paths.get(UPLOAD_DIR).resolve(fileName);
             Files.copy(file.getInputStream(), filePath, StandardCopyOption.REPLACE_EXISTING);
 
-            String fileUrl = "https://simplyfound.vercel.app/api/news/view/" + fileName;
+            String fileUrl = "https://api.simplyfound.com.na/api/news/view/" + fileName;
             existing.setFileUrl(fileUrl);
             existing.setFileType(contentType);
         }

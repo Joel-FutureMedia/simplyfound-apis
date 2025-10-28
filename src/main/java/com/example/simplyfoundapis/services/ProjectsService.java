@@ -57,7 +57,7 @@ public class ProjectsService {
         Path filePath = Paths.get(UPLOAD_DIR).resolve(fileName);
         Files.copy(file.getInputStream(), filePath, StandardCopyOption.REPLACE_EXISTING);
 
-        String fileUrl = "http://localhost:8080/api/projects/view/" + fileName;
+        String fileUrl = "https://api.simplyfound.com.na/api/projects/view/" + fileName;
 
         Status status = statusService.findById(statusId)
                 .orElseThrow(() -> new RuntimeException("Status not found"));
@@ -119,7 +119,7 @@ public class ProjectsService {
             Path filePath = Paths.get(UPLOAD_DIR).resolve(fileName);
             Files.copy(file.getInputStream(), filePath, StandardCopyOption.REPLACE_EXISTING);
 
-            String fileUrl = "http://localhost:8080/api/projects/view/" + fileName;
+            String fileUrl = "https://api.simplyfound.com.na/api/projects/view/" + fileName;
             existing.setFileUrl(fileUrl);
             existing.setFileType(contentType);
         }
