@@ -69,7 +69,7 @@ public class HeroSectionController {
             @RequestParam("title") String title,
             @RequestParam("description") String description) throws IOException {
         HeroSection updated = heroSectionService.updateHero(id, file, title, description);
-        return ResponseEntity.ok(updated);
+        return ResponseEntity.ok(updated); //
     }
 
     @DeleteMapping("/delete/{id}")
