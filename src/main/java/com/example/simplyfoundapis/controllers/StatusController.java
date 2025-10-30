@@ -10,6 +10,11 @@ import java.util.Optional;
 
 @RestController
 @RequestMapping("/api/status")
+@CrossOrigin(origins = {"https://ijg-research-admin.vercel.app", "http://localhost:8080"},
+        allowedHeaders = "*",
+        methods = {RequestMethod.GET, RequestMethod.POST, RequestMethod.PUT, RequestMethod.DELETE},
+        exposedHeaders = {"Content-Disposition", "Content-Type"},
+        allowCredentials = "true")
 public class StatusController {
     @Autowired
     private StatusService statusService;

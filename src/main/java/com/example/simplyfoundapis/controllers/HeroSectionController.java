@@ -15,7 +15,7 @@ import java.util.List;
 
 @RestController
 @RequestMapping("/api/hero")
-@CrossOrigin(origins = {"https://simplyfound.vercel.app", "http://localhost:5173"},
+@CrossOrigin(origins = {"https://simplyfound.vercel.app", "http://localhost:8080"},
         allowedHeaders = "*",
         methods = {RequestMethod.GET, RequestMethod.POST, RequestMethod.PUT, RequestMethod.DELETE},
         exposedHeaders = {"Content-Disposition", "Content-Type"},
