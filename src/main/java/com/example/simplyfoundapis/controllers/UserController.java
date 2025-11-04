@@ -11,7 +11,7 @@ import java.util.Optional;
 
 @RestController
 @RequestMapping("/api/users")
-@CrossOrigin(origins = {"https://simplyfound.vercel.app", "http://localhost:8080", "http://simplyfoundprojects-newgate-m8oqh4-145729-37-27-56-188.traefik.me", "http://simplyfoundprojects-newgate-m8oqh4-145729-37-27-56-188.traefik.me/admin/login"},
+@CrossOrigin(origins = {"https://simplyfound.vercel.app", "https://newgate.simplyfound.com.na","https://newgate.simplyfound.com.na/admin"},
         allowedHeaders = "*",
         methods = {RequestMethod.GET, RequestMethod.POST, RequestMethod.PUT, RequestMethod.DELETE},
         exposedHeaders = {"Content-Disposition", "Content-Type"},
